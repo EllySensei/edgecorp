@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet our Team | Edge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/topbar.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="media/logo.png" alt="Edge Logo" class="logo" width="45" height="40">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><p>EDGE</p></a>
+            <a href="people.html" class="nav-link"><p>Meet our Team</p></a>
+            <a href="products.html" class="nav-link"><p>Products</p></a>
+            <a href="support.html" class="nav-link"><p>Support</p></a>
+        </div>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('fname');
+        const email = params.get('email');
+        const feedback = params.get('fback');
+        document.body.innerHTML += `<div class="about-us">
+            <h1 class="about-header">Thank You for Your Feedback!</h1>
+            <div class="feedback-summary">
+                <h2>Submitted Information:</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email Address:</strong> ${email}</p>
+                <p><strong>Feedback:</strong> ${feedback}</p>
+            </div>`
+    </script>
+</body>
+</html>

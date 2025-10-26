@@ -1,0 +1,235 @@
+@font-face {
+  font-family: BebasNeue; /* set name */
+  src: url(../fonts/BebasNeue.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: Montserrat; /* set name */
+  src: url(../fonts/Montserrat.ttf); /* url of the font */
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  background-color: #1a2c6b;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 10px 10px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  transform: translateY(10px); /* visual offset */
+  z-index: 1000;
+  margin-left: 20px;
+    margin-right: 20px;
+}
+
+.top-bar.sticky {
+  transform: translateY(0); /* animates smoothly */
+  border-radius: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+.nav-links {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: white !important;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block; 
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px; 
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+
+.first-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slogan-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px; /* remove margin */
+    z-index: 10; /* above video but below top-bar if needed */
+    overflow: hidden;
+}
+
+.slogan-index {
+    font-family: BebasNeue, sans-serif;
+    font-size: 164px;
+    color: white;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.about-us {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    scroll-margin-top: 80px; /* Adjust this value based on your top bar height */
+}
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us h1 {
+    font-family: BebasNeue, sans-serif;
+    font-size: 64px;
+    color: rgb(23, 49, 104);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 250px;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.team-members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.member-card {
+    box-sizing: border-box;
+    text-align: center;
+    flex: 0 0 calc((100% - 48px) / 3); 
+    max-width: calc((100% - 48px) / 3);
+    min-width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.member-card a {
+  position: relative; 
+  color: black !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block; 
+  padding-bottom: 5px; 
+}
+
+.member-card a::after {
+  content: "";
+  position: absolute;
+  left: 0; 
+  bottom: 20px  ; 
+  width: 0;
+  height: 2px;
+  background-color: #173168; 
+  transition: width 0.3s ease;
+  transform: none; 
+}
+
+.member-card a:hover::after {
+  width: 100%;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.feedback-form input[type="submit"],
+.feedback-form .btn {
+  background: #173168;
+  color: #fff;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea,
+.feedback-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6dce9;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #173168;
+  background: #fbfdff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form textarea:focus,
+.feedback-form input[type="email"]:focus {
+  outline: none;
+  border-color: #0f3a8b;
+  box-shadow: 0 4px 14px rgba(15, 58, 139, 0.08);
+}
+
+.feedback-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.member-photo-circle {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+object-fit: cover;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
