@@ -1,0 +1,184 @@
+/*Master Styles*/
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.topbanner {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*NavStyles*/
+.navcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left {
+    display: flex;
+}
+
+.navcontainer > .left > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+} 
+
+.navwrapper {
+    height: 22px;
+    
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.navwrapper a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5;
+}
+
+.navwrapper:hover {
+    border-bottom: 1px solid white;
+}
+
+.navwrapper a:hover {
+    color: blue;
+}
+
+.activenavlink {
+    border-bottom: 1px solid blue;
+}
+
+.activenavlink a {
+    color: blue !important;
+}
+/*paragraph styles*/
+
+.infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Portfolio styles*/
+
+.portfolioitemswrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.portfoliowrapper {
+    position: relative;
+    
+    
+}
+
+.portfolioimgbackround {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imgwrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    
+    
+}
+
+
+
+.logowrapper {
+    color: white;
+    width: 50%;
+    margin-bottom: 20px;
+    
+    
+}
+
+
+
+.infopicdiv {
+    height: 400px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrappedinfo {
+    color: white;
+}
+
+.infos p {
+    color:white;
+}
+
+
+
+/*JS thinggy*/
+
+.imgwrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+    
+}
+
+.imgwrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+    
+}
+
+.imgwrapper .otherlinks a {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.imgwrapper:hover .otherlinks a {
+    transition: 1s;
+    font-weight: 600;
+    color: blue;
+}
+
+.imgdarken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.twocolumnwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profileimgwrapper img {
+    size: 100%;
+}
+
+.profilecontent h1{
+    color: blue;
+}
+
+.profilecontent p {
+    color: white;
+}

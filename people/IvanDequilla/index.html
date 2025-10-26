@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Dequilla Ivan</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body style="background-color:black">
+        <div class="container">
+            <div class="topbanner" style="background-image:url(Images/SecondBanner.png)"></div>
+            <div class="navcontainer">
+                
+                <div class="left">
+                    <div class="navwrapper activenavlink">
+                        <a href="../../index.html">EDGE</a>
+                    </div>
+
+                    <div class="navwrapper activenavlink">
+                        <a href="index.html">Home</a>
+                    </div>
+                    
+                    <div class="navwrapper">
+                        <a href="about.html">About</a>
+                    </div>
+                    
+                </div>
+
+                <div class="right">
+                    <div style="color: white;">Ivan Kyimzedrick M. Dequilla</div></div>
+                
+            </div>
+
+            <div class="content-wrapper">
+                <div class="portfolioitemswrapper">
+
+                    <div class="portfoliowrapper">
+                        <div class="portfolioimgbackround" style="background-image:url(Images/Thing1.png)"></div>
+
+                        <div class="imgwrapper">
+                            <div class="logowrapper">
+                                <img src="Images/pollinations.jpg" alt="pollinations.jpg">
+                            </div>
+                            <div class="subtitle">
+                                Worked on AI projects using the open source startup Pollinations AI.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="portfoliowrapper">
+                        <div class="portfolioimgbackround" style="background-image:url(Images/Thing1.png)"></div>
+
+                        <div class="imgwrapper">
+                            <div class="logowrapper">
+                                <img src="Images/roblox (LOGO).png" alt="pollinations.jpg">
+                            </div>
+                            <div class="subtitle">
+                                Integrated AI into ROBLOX studio to make fun and interactive games.
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="portfoliowrapper">
+                        <div class="portfolioimgbackround" style="background-image:url(Images/Thing1.png)"></div>
+
+                        <div class="imgwrapper">
+                            <div class="logowrapper">
+                                <img src="Images/java.png" alt="java.png">
+                            </div>
+                            <div class="subtitle">
+                                Has years of experience in JAVA programming language.
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfoliowrapper')
+
+        portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                
+                portfolioItem.childNodes[1].classList.add('imgdarken');
+            })
+            portfolioItem.addEventListener('mouseout', () => {
+                
+                portfolioItem.childNodes[1].classList.remove('imgdarken');
+            })
+            
+        })
+    </script>
+</html>
